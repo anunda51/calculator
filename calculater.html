@@ -4,30 +4,59 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>Document</title>
+    <title>Calculator</title>
+    <link rel="stylesheet" type="text/css" href="assets/css/style.css">
+    <link rel="stylesheet" type="text/css"
+          href="https://fonts.googleapis.com/css?family=Montserrat">
 </head>
 <body>
-    <input type="text" id="firstNumber" placeholder="put firstNumber">
-    <input type="text" id="secondNumber" placeholder="put secondNumber">
+    <div class="header-container">
+        <header>Calculator</header>
+    </div>
 
-    <button id="sumButton" onclick="getSum()">+</button>
+    <div>
+        <section>
+            <div class="main">
+                <input type="text" id="firstNumber" placeholder="put firstNumber">
+                <input type="text" id="secondNumber" placeholder="put secondNumber">
 
-    <div id="output"></div>
+                <button class="button" id="sumButton" onclick="getSum()">+</button>
+                <button class="button" id="sumButton" onclick="getMinus()">-</button>
+                <button class="button" id="sumButton" onclick="getMultiply()">*</button>
+                <button class="button" id="sumButton" onclick="getDivide()">/</button>
+                <br>
+                <br>
+                <div class="result" id="output"></div>
 
-    <script>
-        var firstNumber = document.getElementById("firstNumber");
-        var secondNumber = document.getElementById("secondNumber");
-        var output = document.getElementById("output");
+                <script>
+                    var firstNumber = document.getElementById("firstNumber");
+                    var secondNumber = document.getElementById("secondNumber");
+                    var output = document.getElementById("output");
 
-        function getSum(){
-            let sum = parseInt(firstNumber.value) + parseInt(secondNumber.value);
-            showResult(sum);
-        }
-
-        function showResult(result){
-            output.innerHTML = "answer= " + result;
-        }
-    </script>
-
+                    function getSum(){
+                        let sum = parseInt(firstNumber.value) + parseInt(secondNumber.value);
+                        showResult(sum);
+                    }
+                    function getMinus(){
+                        let sum = parseInt(firstNumber.value) - parseInt(secondNumber.value);
+                        showResult(sum);
+                    }
+                    function getMultiply(){
+                        let sum = parseInt(firstNumber.value) * parseInt(secondNumber.value);
+                        showResult(sum);
+                    }
+                    function getDivide(){
+                        let sum = parseInt(firstNumber.value) / parseInt(secondNumber.value);
+                        showResult(sum);
+                    }
+        
+                    function showResult(result){
+                        output.innerHTML = "Result = " + result;
+                    }
+                </script>
+            </div>
+        </section>
+    </div>
+    <footer></footer>   
 </body>
 </html>
